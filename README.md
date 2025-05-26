@@ -5,7 +5,7 @@ Blender lacks a simple way to transfer weights from a mesh to Grease Pencil stro
 I've developed an addon that takes care of that.
 
 # Install
-Download the latest release as a ZIP file and install it as an usual addon
+Download the [Latest Release](https://github.com/luca-malisan/LM_GPTransferWeights/releases/latest) as a ZIP file and install it as an usual addon
 
 # Usage
 You can find the addon panel in the N panel, section **"Grease Pencil"**.
