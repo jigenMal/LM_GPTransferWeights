@@ -12,8 +12,11 @@ You can find the addon panel in the N panel, section "Grease Pencil".
 Select a Source Mesh and a Target Grease Pencil object in the two boxes.
 
 There are two main modes:
+
 Original: The source mesh is evaluated in its original position. So you have to create your drawings on top of the mesh in its rest pose. You can disable an animation selecting "Rest Pose" for the armature while you draw
+
 Each frame (slow, changes drawings): The source mesh is evaluated in its animated position, driven by the armature. So you can draw on each frame on top of an animated mesh. The points of the target Grease Pencil drawing will be moved to an inverse position, so they will be in their place when driven by the armature. 
+
 
 The weight assigned to each Grease Pencil point is taken from the closest vertex on the mesh. So on very sparse meshes they can behave slightly different than the mesh surface. This is particularly visible with the "Each frame" mode, because the points are moved back according to the transformation of the nearest vertex. You can fix that with ShrinkWrap or Smooth modifiers, after the transfer.
 
@@ -27,4 +30,6 @@ The locked vertex groups will not be changed. You can lock vertex groups you wan
 
 The "Delete all unlocked weights" erases all vertex groups on the target Grease Pencil object. On Blender 4.3 and later there is a similar function in the vertex groups section, but 4.2 lacks that feature.
 This button can be useful to remove all the weights and start from scratch.
+
+The process might take time, specially with dense source meshes and Grease Pencil objects with a lot of frames and strokes. The "Each frame" mode is particularly slow. If you want to have feedback, open the console before clicking "Transfer Weights". In the console you will see progress messages.
 
